@@ -22,7 +22,6 @@ BuildRequires:  perl(Heap)
 BuildRequires:  perl(DB_File)
 BuildRequires:  perl(Digest::SHA1)
 BuildArch:	noarch
-Buildroot:	%{_tmppath}/%{name}-%{version}
 
 %description
 %{module} perl module
