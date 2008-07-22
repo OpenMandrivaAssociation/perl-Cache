@@ -1,7 +1,7 @@
 %define	module	Cache
 %define	name	perl-%{module}
 %define	version	2.04
-%define	release	%mkrel 5
+%define	release	%mkrel 7
 %define	_requires_exceptions	perl(warnings::register)
 
 Name:		%{name}
