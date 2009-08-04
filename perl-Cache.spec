@@ -1,17 +1,18 @@
-%define	module	Cache
-%define	name	perl-%{module}
-%define	version	2.04
-%define	release	%mkrel 7
+%define	upstream_name	 Cache
+%define	upstream_version 2.04
+
 %define	_requires_exceptions	perl(warnings::register)
 
-Name:		%{name}
-Version:	%{version}
-Release:	%{release}
+Name:       perl-%{upstream_name}
+Version:    %perl_convert_version %{upstream_version}
+Release:    %mkrel 1
+
 Summary:	The Cache interface
 License:	GPL
 Group:		Development/Perl
-Source:		ftp://ftp.perl.org/pub/CPAN/modules/by-module/Cache/%{module}-%{version}.tar.bz2
-Url:		http://search.cpan.org/dist/%{module}
+Url:		http://search.cpan.org/dist/%{upstream_name}
+Source0:	ftp://ftp.perl.org/pub/CPAN/modules/by-module/Cache/%{upstream_name}-%{upstream_version}.tar.bz2
+
 %if %{mdkversion} < 1010
 Buildrequires:	perl-devel
 %endif
@@ -22,13 +23,13 @@ BuildRequires:  perl(Heap)
 BuildRequires:  perl(DB_File)
 BuildRequires:  perl(Digest::SHA1)
 BuildArch:	noarch
-Buildroot:	%{_tmppath}/%{name}-%{version}
+Buildroot:	%{_tmppath}/%{name}-%{version}-%{release}
 
 %description
-%{module} perl module
+%{upstream_name} perl module
 
 %prep
-%setup -q -n %{module}-%{version}
+%setup -q -n %{upstream_name}-%{upstream_version}
 
 %build
 perl Makefile.PL INSTALLDIRS=vendor
@@ -49,4 +50,3 @@ rm -rf %{buildroot}
 %doc Changes README TODO
 %{perl_vendorlib}/Cache*
 %{_mandir}/man3/*
-
