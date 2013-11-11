@@ -18,6 +18,7 @@ Url:		http://search.cpan.org/dist/%{upstream_name}
 Source0:	ftp://ftp.perl.org:21/pub/CPAN/modules/by-module/Cache/Cache-%{upstream_version}.tar.gz
 
 BuildRequires:	perl-devel
+BuildRequires: perl(Module::Build)
 BuildRequires:	perl(File::NFSLock)
 BuildRequires:  perl(Date::Format)
 BuildRequires:  perl(IO::String)
