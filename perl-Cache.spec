@@ -1,5 +1,5 @@
 %define	upstream_name	 Cache
-%define	upstream_version 2.04
+%define upstream_version 2.06
 
 %if %{_use_internal_dependency_generator}
 %define __noautoreq 'perl\\(warnings::register\\)'
@@ -9,13 +9,13 @@
 
 Name:		perl-%{upstream_name}
 Version:	%perl_convert_version %{upstream_version}
-Release:	3
+Release:	1
 
 Summary:	The Cache interface
 License:	GPL
 Group:		Development/Perl
 Url:		http://search.cpan.org/dist/%{upstream_name}
-Source0:	ftp://ftp.perl.org/pub/CPAN/modules/by-module/Cache/%{upstream_name}-%{upstream_version}.tar.bz2
+Source0:	ftp://ftp.perl.org:21/pub/CPAN/modules/by-module/Cache/Cache-%{upstream_version}.tar.gz
 
 BuildRequires:	perl-devel
 BuildRequires:	perl(File::NFSLock)
@@ -91,4 +91,5 @@ make test
 
 * Fri Jan 06 2006 Per Ã˜yvind Karlsen <pkarlsen@mandriva.com> 2.03-1mdk
 - initial Mandriva release
+
 
