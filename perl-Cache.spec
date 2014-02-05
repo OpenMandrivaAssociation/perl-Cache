@@ -1,5 +1,5 @@
 %define	upstream_name	 Cache
-%define upstream_version 2.06
+%define upstream_version 2.09
 
 %if %{_use_internal_dependency_generator}
 %define __noautoreq 'perl\\(warnings::register\\)'
@@ -92,5 +92,6 @@ perl Build.PL installdirs=vendor
 
 * Fri Jan 06 2006 Per Ã˜yvind Karlsen <pkarlsen@mandriva.com> 2.03-1mdk
 - initial Mandriva release
+
 
 
