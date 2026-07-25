@@ -1,5 +1,5 @@
 %define	upstream_name	 Cache
-%define upstream_version 2.10
+%define upstream_version 2.11
 
 %if %{_use_internal_dependency_generator}
 %define __noautoreq 'perl\\(warnings::register\\)'
@@ -8,15 +8,15 @@
 %endif
 
 Name:		perl-%{upstream_name}
-Version:	%perl_convert_version %{upstream_version}
-Release:	3
+Version:	%{upstream_version}
+Release:	1
 
 Summary:	The Cache interface
 
 License:	GPL
 Group:		Development/Perl
-Url:		https://search.cpan.org/dist/%{upstream_name}
-Source0:	ftp://ftp.perl.org:21/pub/CPAN/modules/by-module/%{upstream_name}/%{upstream_name}-%{upstream_version}.tar.gz
+Url:		https://bitbucket.org/shlomif/web-cpan
+Source0:	https://cpan.metacpan.org/authors/id/S/SH/SHLOMIF/Cache-%{upstream_version}.tar.gz
 
 BuildRequires:	perl-devel
 BuildRequires: perl(Digest::SHA)
